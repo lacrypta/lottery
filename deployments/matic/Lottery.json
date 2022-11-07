@@ -1,0 +1,439 @@
+{
+  "address": "0xFB33847A86027ab202ba93CFe43380e8A00EBa01",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "NameAlreadyInUse",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "NotYetCreated",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "numberOfPlayers",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "numberOfWinners",
+          "type": "uint256"
+        }
+      ],
+      "name": "NumberOfWinnersMustBeAtMostNumberOfPlayers",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NumberOfWinnersMustBePositive",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "PlayersMustBeNonEmpty",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "components": [
+            {
+              "internalType": "bytes32",
+              "name": "seed",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "numberOfWinners",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string[]",
+              "name": "players",
+              "type": "string[]"
+            }
+          ],
+          "internalType": "struct ILottery.Config",
+          "name": "config",
+          "type": "tuple"
+        }
+      ],
+      "name": "create",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "exists",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "existing",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "get",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes32",
+              "name": "seed",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "numberOfWinners",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string[]",
+              "name": "players",
+              "type": "string[]"
+            }
+          ],
+          "internalType": "struct ILottery.Config",
+          "name": "lottery",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes32",
+              "name": "seed",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "numberOfWinners",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string[]",
+              "name": "players",
+              "type": "string[]"
+            }
+          ],
+          "internalType": "struct ILottery.Config",
+          "name": "config",
+          "type": "tuple"
+        }
+      ],
+      "name": "simulate",
+      "outputs": [
+        {
+          "internalType": "string[]",
+          "name": "prizeWinners",
+          "type": "string[]"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "winners",
+      "outputs": [
+        {
+          "internalType": "string[]",
+          "name": "prizeWinners",
+          "type": "string[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x9b6e076acc0aaaa45f55f73b61ed3acf2d8046e2eb6373cffaf5d481282752f7",
+  "receipt": {
+    "to": null,
+    "from": "0x4BADCf0DCeaAD060f86D9b34c9E118c8319945AE",
+    "contractAddress": "0xFB33847A86027ab202ba93CFe43380e8A00EBa01",
+    "transactionIndex": 31,
+    "gasUsed": "1019787",
+    "logsBloom": "0x00000000000000000000000000000008000000000000000000000000000000400000000000000000000000000000000000008000000020000000000000000000000000000000000000000000000000800000000000000000000100000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000400000000000000000000000000000000800000000000200000000000000000000000000000000000001000000000000000000000004000000000000000000001000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000100000",
+    "blockHash": "0x0334f1e6586a2f69a28ea20ed36ffe52f09629167d0df9e514e297809e1fff8d",
+    "transactionHash": "0x9b6e076acc0aaaa45f55f73b61ed3acf2d8046e2eb6373cffaf5d481282752f7",
+    "logs": [
+      {
+        "transactionIndex": 31,
+        "blockNumber": 35325403,
+        "transactionHash": "0x9b6e076acc0aaaa45f55f73b61ed3acf2d8046e2eb6373cffaf5d481282752f7",
+        "address": "0x0000000000000000000000000000000000001010",
+        "topics": [
+          "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63",
+          "0x0000000000000000000000000000000000000000000000000000000000001010",
+          "0x0000000000000000000000004badcf0dceaad060f86d9b34c9e118c8319945ae",
+          "0x00000000000000000000000072f93a2740e00112d5f2cef404c0aa16fae21fa4"
+        ],
+        "data": "0x000000000000000000000000000000000000000000000000008a6612783ff57f000000000000000000000000000000000000000000000000b872b6c9cf5b08e00000000000000000000000000000000000000000000012856759e060ab6f4927000000000000000000000000000000000000000000000000b7e850b7571b136100000000000000000000000000000000000000000000128567e4467323af3ea6",
+        "logIndex": 116,
+        "blockHash": "0x0334f1e6586a2f69a28ea20ed36ffe52f09629167d0df9e514e297809e1fff8d"
+      }
+    ],
+    "blockNumber": 35325403,
+    "cumulativeGasUsed": "6067530",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "28f1a50cdd3021061dbfc1f24f1522d6",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"NameAlreadyInUse\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"NotYetCreated\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"numberOfPlayers\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"numberOfWinners\",\"type\":\"uint256\"}],\"name\":\"NumberOfWinnersMustBeAtMostNumberOfPlayers\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NumberOfWinnersMustBePositive\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"PlayersMustBeNonEmpty\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"seed\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"numberOfWinners\",\"type\":\"uint256\"},{\"internalType\":\"string[]\",\"name\":\"players\",\"type\":\"string[]\"}],\"internalType\":\"struct ILottery.Config\",\"name\":\"config\",\"type\":\"tuple\"}],\"name\":\"create\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"exists\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"existing\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"get\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"seed\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"numberOfWinners\",\"type\":\"uint256\"},{\"internalType\":\"string[]\",\"name\":\"players\",\"type\":\"string[]\"}],\"internalType\":\"struct ILottery.Config\",\"name\":\"lottery\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"seed\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"numberOfWinners\",\"type\":\"uint256\"},{\"internalType\":\"string[]\",\"name\":\"players\",\"type\":\"string[]\"}],\"internalType\":\"struct ILottery.Config\",\"name\":\"config\",\"type\":\"tuple\"}],\"name\":\"simulate\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"prizeWinners\",\"type\":\"string[]\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"winners\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"prizeWinners\",\"type\":\"string[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"errors\":{\"NameAlreadyInUse(string)\":[{\"params\":{\"name\":\"The offending name\"}}],\"NotYetCreated(string)\":[{\"params\":{\"name\":\"The offending name\"}}],\"NumberOfWinnersMustBeAtMostNumberOfPlayers(uint256,uint256)\":[{\"params\":{\"numberOfPlayers\":\"The offending number of players\",\"numberOfWinners\":\"The offending number of winners\"}}]},\"kind\":\"dev\",\"methods\":{\"create(string,(bytes32,uint256,string[]))\":{\"custom:revert\":\"NameAlreadyInUsePlayersMustBeNonEmptyNumberOfWinnersMustBePositiveNumberOfWinnersMustBeAtMostNumberOfPlayers\",\"params\":{\"config\":\"Lottery configuration to use\",\"name\":\"Lottery name to use\"},\"returns\":{\"success\":\" True if creation was successful\"}},\"exists(string)\":{\"params\":{\"name\":\"Lottery name to check\"},\"returns\":{\"existing\":\" True if the given lottery name exists, false otherwise\"}},\"get(string)\":{\"custom:revert\":\"NotYetCreated\",\"params\":{\"name\":\"Lottery name to retrieve\"},\"returns\":{\"lottery\":\" The lottery configuration proper\"}},\"simulate((bytes32,uint256,string[]))\":{\"custom:revert\":\"PlayersMustBeNonEmptyNumberOfWinnersMustBePositiveNumberOfWinnersMustBeAtMostNumberOfPlayers\",\"params\":{\"config\":\"Lottery configuration to use\"},\"returns\":{\"prizeWinners\":\" List of winners\"}},\"winners(string)\":{\"custom:revert\":\"NotYetCreated\",\"params\":{\"name\":\"Lottery name to retrieve winners for\"},\"returns\":{\"prizeWinners\":\" List of winners\"}}},\"version\":1},\"userdoc\":{\"errors\":{\"NameAlreadyInUse(string)\":[{\"notice\":\"Raised upon encountering an already-existing lottery name\"}],\"NotYetCreated(string)\":[{\"notice\":\"Raised upon encountering a non-existing lottery name\"}],\"NumberOfWinnersMustBeAtMostNumberOfPlayers(uint256,uint256)\":[{\"notice\":\"Raised upon encountering a number of winners greater than the corresponding population\"}],\"NumberOfWinnersMustBePositive()\":[{\"notice\":\"Raised upon encountering a 0-size selection (ie. the number of winners)\"}],\"PlayersMustBeNonEmpty()\":[{\"notice\":\"Raised upon encountering an empty players list\"}]},\"kind\":\"user\",\"methods\":{\"create(string,(bytes32,uint256,string[]))\":{\"notice\":\"Create a new lottery with the given configuration\"},\"exists(string)\":{\"notice\":\"Determine whether the given lottery name exists\"},\"get(string)\":{\"notice\":\"Retrieve an existing lottery by name\"},\"simulate((bytes32,uint256,string[]))\":{\"notice\":\"Simulate the execution of the given lottery configuration\"},\"winners(string)\":{\"notice\":\"Retrieve the list of winners\"}},\"notice\":\"Blockchain-based Lottery Implementation This Lottery implementation uses iterated Keccak256 as the underlying RNG.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Lottery.sol\":\"Lottery\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":2000},\"remappings\":[]},\"sources\":{\"contracts/ILottery.sol\":{\"content\":\"// SPDX-License-Identifier: AGPL-3.0-or-later\\npragma solidity ^0.8.17;\\n\\n/**\\n * Blockchain-based Lottery\\n *\\n * This interface allows you to interact with a blockchain-based lottery able to deal several prizes to a given population.\\n * All the inputs needed to reproduce the result are persisted in the blockchain, so as to be auditable and reproducible.\\n *\\n *\\n * The Lottery works like so:\\n *   - a new Lottery must be created, in order to do so, you need a name for it, the seed to use, the participant population\\n *     as a list of strings, and the number of prizes that will be dealt\\n *   - once the lottery is created, exists(name) will return true, and get(name) will return a structure representing the seed to\\n *     use, the population, and the number of prizes\\n *   - finally, with a created lottery, calling winners(name) will return the prize winners in no particular order.\\n *   - alternatively, the simulate(config) method can be called to obtain the winners without persisting anything on the\\n *     blockchain.\\n *\\n * Let's follow along a simple example.\\n * We want to create a Lottery that will deal 5 prizes amongst 100 participants, using a zero seed, we'll call it \\\"Doing the\\n * dishes for 100 dudes\\\".\\n *\\n * We first need to call (we'll use \\\">>>\\\" to denote calls, and \\\"<<<\\\" responses):\\n *\\n *   >>> create(\\\"Doing the dishes for 100 dudes\\\", [\\\"0x00...0\\\", 5, [\\\"one\\\", \\\"two\\\", ..., \\\"one hundred\\\"]])\\n *   <<< bool: success true\\n *\\n * Now we can check whether it was indeed created by doing:\\n *\\n *   >>> exists(\\\"Doing the dishes for 100 dudes\\\")\\n *   <<< bool: existing true\\n *\\n * and retrieve the Lottery's parameters by:\\n *\\n *   >>> get(\\\"Doing the dishes for 100 dudes\\\")\\n *   <<< tuple(bytes32,uint256,string[]): lottery 0x00...0,5,[\\\"one\\\",\\\"two\\\",...,\\\"one hundred\\\"]\\n *\\n * (see how this is the same data the create() call returns).\\n * Finally, we can retrieve the unlucky winners by calling:\\n *\\n *   >>> winners(\\\"Doing the dishes for 100 dudes\\\")\\n *   <<< string[]: winners \\\"nineteen\\\",\\\"twenty-three\\\",\\\"sixty-six\\\",\\\"ninety-two\\\",\\\"ninety-nine\\\"\\n *\\n * this means that participants 19, 23, 66, 92, and 99 won the coveted responsibility of doing the dishes.\\n *\\n *\\n * Notice that once the Lottery is created, the winners are all implicitly determined automatically, and persisted in the blockchain\\n * for all to see and audit.\\n */\\ninterface ILottery {\\n\\n    /**\\n     * Raised upon encountering a non-existing lottery name\\n     *\\n     * @param name  The offending name\\n     */\\n    error NotYetCreated(string name);\\n\\n    /**\\n     * Raised upon encountering an already-existing lottery name\\n     *\\n     * @param name  The offending name\\n     */\\n    error NameAlreadyInUse(string name);\\n\\n    /**\\n     * Raised upon encountering an empty players list\\n     *\\n     */\\n    error PlayersMustBeNonEmpty();\\n\\n    /**\\n     * Raised upon encountering a 0-size selection (ie. the number of winners)\\n     *\\n     */\\n    error NumberOfWinnersMustBePositive();\\n\\n    /**\\n     * Raised upon encountering a number of winners greater than the corresponding population\\n     *\\n     * @param numberOfPlayers  The offending number of players\\n     * @param numberOfWinners  The offending number of winners\\n     */\\n    error NumberOfWinnersMustBeAtMostNumberOfPlayers(uint256 numberOfPlayers, uint256 numberOfWinners);\\n\\n    /**\\n     * Structure representing a lottery configuration\\n     *\\n     * @custom:member seed  The RNG seed to use for this lottery\\n     * @custom:member numberOfWinners  The number of winners to use for this lottery\\n     * @custom:member players  A list of players for this lottery (this list CAN contain duplicates to simulate non-uniform odds)\\n     */\\n    struct Config {\\n        bytes32 seed;\\n        uint256 numberOfWinners;\\n        string[] players;\\n    }\\n\\n    /**\\n     * Determine whether the given lottery name exists\\n     *\\n     * @param name  Lottery name to check\\n     * @return existing  True if the given lottery name exists, false otherwise\\n     */\\n    function exists(string memory name) external view returns (bool existing);\\n\\n    /**\\n     * Retrieve an existing lottery by name\\n     *\\n     * @param name  Lottery name to retrieve\\n     * @return lottery  The lottery configuration proper\\n     * @custom:revert  NotYetCreated\\n     */\\n    function get(string memory name) external view returns (Config memory lottery);\\n\\n    /**\\n     * Create a new lottery with the given configuration\\n     *\\n     * @param name  Lottery name to use\\n     * @param config  Lottery configuration to use\\n     * @return success  True if creation was successful\\n     * @custom:revert  NameAlreadyInUse\\n     * @custom:revert  PlayersMustBeNonEmpty\\n     * @custom:revert  NumberOfWinnersMustBePositive\\n     * @custom:revert  NumberOfWinnersMustBeAtMostNumberOfPlayers\\n     */\\n    function create(string memory name, Config memory config) external returns (bool success);\\n\\n    /**\\n     * Retrieve the list of winners\\n     *\\n     * @param name  Lottery name to retrieve winners for\\n     * @return prizeWinners  List of winners\\n     * @custom:revert  NotYetCreated\\n     */\\n    function winners(string memory name) external view returns (string[] memory prizeWinners);\\n\\n    /**\\n     * Simulate the execution of the given lottery configuration\\n     *\\n     * @param config  Lottery configuration to use\\n     * @return prizeWinners  List of winners\\n     * @custom:revert  PlayersMustBeNonEmpty\\n     * @custom:revert  NumberOfWinnersMustBePositive\\n     * @custom:revert  NumberOfWinnersMustBeAtMostNumberOfPlayers\\n     */\\n    function simulate(Config memory config) external pure returns (string[] memory prizeWinners);\\n}\\n\",\"keccak256\":\"0x4fefec88e6f83c5c45a16e0e1d3390f7e6307a1e83309cff17c47f83d31a7f6b\",\"license\":\"AGPL-3.0-or-later\"},\"contracts/Lottery.sol\":{\"content\":\"// SPDX-License-Identifier: AGPL-3.0-or-later\\npragma solidity ^0.8.17;\\n\\nimport {ILottery} from \\\"./ILottery.sol\\\";\\n\\n/**\\n * Blockchain-based Lottery Implementation\\n *\\n * This Lottery implementation uses iterated Keccak256 as the underlying RNG.\\n *\\n */\\ncontract Lottery is ILottery {\\n\\n    /**\\n     * Mapping from hashed lottery name to lottery configuration\\n     *\\n     */\\n    mapping(bytes32 => Config) internal _lotteries;\\n\\n    /**\\n     * Determine whether the given lottery name exists\\n     *\\n     * @param name  Lottery name to check\\n     * @return existing  True if the given lottery name exists, false otherwise\\n     */\\n    function exists(string memory name) external view override returns (bool existing) {\\n        existing = (0 != _lotteries[_nameHash(name)].players.length);\\n    }\\n\\n    /**\\n     * Retrieve an existing lottery by name\\n     *\\n     * @param name  Lottery name to retrieve\\n     * @return lottery  The lottery configuration proper\\n     * @custom:revert  NotYetCreated\\n     */\\n    function get(string memory name) external view override returns (Config memory lottery) {\\n        lottery = _get(name);\\n    }\\n\\n    /**\\n     * Create a new lottery with the given configuration\\n     *\\n     * @param name  Lottery name to use\\n     * @param config  Lottery configuration to use\\n     * @return success  True if creation was successful\\n     * @custom:revert  NameAlreadyInUse\\n     * @custom:revert  PlayersMustBeNonEmpty\\n     * @custom:revert  NumberOfWinnersMustBePositive\\n     * @custom:revert  NumberOfWinnersMustBeAtMostNumberOfPlayers\\n     */\\n    function create(string memory name, Config memory config) external override returns (bool success) {\\n        success = _create(name, config);\\n    }\\n\\n    /**\\n     * Retrieve the list of winners\\n     *\\n     * @param name  Lottery name to retrieve winners for\\n     * @return prizeWinners  List of winners\\n     * @custom:revert  NotYetCreated\\n     */\\n    function winners(string memory name) external view override returns (string[] memory prizeWinners) {\\n        prizeWinners = _winners(_get(name));\\n    }\\n\\n    /**\\n     * Simulate the execution of the given lottery configuration\\n     *\\n     * @param config  Lottery configuration to use\\n     * @return prizeWinners  List of winners\\n     * @custom:revert  PlayersMustBeNonEmpty\\n     * @custom:revert  NumberOfWinnersMustBePositive\\n     * @custom:revert  NumberOfWinnersMustBeAtMostNumberOfPlayers\\n     */\\n    function simulate(Config memory config) external pure override returns (string[] memory prizeWinners) {\\n        prizeWinners = _winners(_validate(config));\\n    }\\n\\n    /**\\n     * Structure representing the internal state of the underlying RNG\\n     *\\n     * @custom:member state  The internal state (to be returned iteratively)\\n     * @custom:member index  The current bit position being returned\\n     * @custom:member round  The number of hash iterations done so far, incremented each time the state needs to be hashed\\n     */\\n    struct _Rng {\\n        bytes32 state;\\n        uint8 index;\\n        uint256 round;\\n    }\\n\\n    /**\\n     * Validate the given lottery configuration\\n     *\\n     * @param config  Lottery configuration to validate\\n     * @return ok  The given configuration, if valid\\n     * @custom:revert  PlayersMustBeNonEmpty\\n     * @custom:revert  NumberOfWinnersMustBePositive\\n     * @custom:revert  NumberOfWinnersMustBeAtMostNumberOfPlayers\\n     */\\n    function _validate(Config memory config) internal pure returns (Config memory ok) {\\n        if (0 == config.players.length) {\\n            revert PlayersMustBeNonEmpty();\\n        }\\n        if (0 == config.numberOfWinners) {\\n            revert NumberOfWinnersMustBePositive();\\n        }\\n        if (config.players.length < config.numberOfWinners) {\\n            revert NumberOfWinnersMustBeAtMostNumberOfPlayers(config.players.length, config.numberOfWinners);\\n        }\\n        ok = config;\\n    }\\n\\n    /**\\n     * Compute the hashed lottery name\\n     *\\n     * @param name  The lottery name to hash\\n     * @return nameHash  The hashed lottery name\\n     */\\n    function _nameHash(string memory name) internal pure returns (bytes32 nameHash) {\\n        nameHash = keccak256(bytes(name));\\n    }\\n\\n    /**\\n     * Retrieve an existing lottery by name (internal)\\n     *\\n     * @param name  Lottery name to retrieve\\n     * @return lottery  The lottery configuration proper\\n     * @custom:revert  NotYetCreated\\n     */\\n    function _get(string memory name) internal view returns (Config memory lottery) {\\n        bytes32 nameHash = _nameHash(name);\\n        if (0 == _lotteries[nameHash].players.length) {\\n            revert NotYetCreated(name);\\n        }\\n        lottery = _lotteries[nameHash];\\n    }\\n\\n    /**\\n     * Create a new lottery with the given configuration (internal)\\n     *\\n     * @param name  Lottery name to use\\n     * @param config  Lottery configuration to use\\n     * @return success  True if creation was successful\\n     * @custom:revert  NameAlreadyInUse\\n     * @custom:revert  PlayersMustBeNonEmpty\\n     * @custom:revert  NumberOfWinnersMustBePositive\\n     * @custom:revert  NumberOfWinnersMustBeAtMostNumberOfPlayers\\n     */\\n    function _create(string memory name, Config memory config) internal returns (bool success) {\\n        bytes32 nameHash = _nameHash(name);\\n        if (0 != _lotteries[nameHash].players.length) {\\n            revert NameAlreadyInUse(name);\\n        }\\n        _lotteries[nameHash] = _validate(config);\\n        return true;\\n    }\\n\\n    /**\\n     * Retrieve the list of winners (internal)\\n     *\\n     * Winner retrieval entails creating a permutation of the first `config.players.length` numbers, and taking `config.numberOfWinners` many.\\n     * This ensures _uniform_ selection.\\n     *\\n     * In order to create the truncated permutation proper, the Fisher--Yates algorithm is run until `config.numberOfWinners` items have been\\n     * generated.\\n     * In order to feed the Fisher--yates algorithm, the FDR algorithm is used.\\n     * Finally, the result is sorted using MergeSort.\\n     *\\n     * WARNING: this method assumes the given configuration is indeed valid (as per _validateConfig(config)).\\n     *\\n     *\\n     * @param config  Lottery configuration to use\\n     * @return prizeWinners  List of winners\\n     */\\n    function _winners(Config memory config) internal pure returns (string[] memory prizeWinners) {\\n        uint256[] memory winnerIds = _mergeSort(_fisherYatesUpTo(_Rng(config.seed, 0, 0), config.players.length, config.numberOfWinners));\\n        prizeWinners = new string[](config.numberOfWinners);\\n        for (uint256 i = 0; i < config.numberOfWinners; i++) {\\n            prizeWinners[i] = config.players[winnerIds[i]];\\n        }\\n    }\\n\\n    /**\\n     * Inside-out Fisher--Yates algorithm that only continues until the given number of members\\n     *\\n     * @custom:ref  \\\"Fisher--Yates inside-out algorithm\\\" https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_%22inside-out%22_algorithm\\n     * @param rng  The RNG to use\\n     * @param size  The number of elements in total\\n     * @param until  The number of elements to generate\\n     * @return elements  The generated permutation\\n     */\\n    function _fisherYatesUpTo(_Rng memory rng, uint256 size, uint256 until) internal pure returns (uint256[] memory elements) {\\n        unchecked {\\n            uint256[] memory values = new uint256[](size);\\n            for (uint256 i = 0; i < size; i++) {\\n                values[i] = i;\\n            }\\n            elements = new uint256[](until);\\n            for (uint256 i = 0; i < until; i++) {\\n                uint256 j = i + _fdr(rng, size - i);\\n                (elements[i], values[j]) = (values[j], values[i]);\\n            }\\n        }\\n    }\\n\\n    /**\\n     * Return a uniformly random integer between 0 (inclusive) and `max` (exclusive), using the given RNG\\n     *\\n     * This algorithm implements the FDR algorithm of Lumbroso.\\n     *\\n     * @custom:ref \\\"Optimal Discrete Uniform Generation from Coin Flips, and Applications --- J\\\\u00e9r\\\\u00e9mie Lumbroso (2013)\\\" https://arxiv.org/pdf/1304.1916\\n     * @param rng  The RNG to use\\n     * @param max  The maximum (exclusive) to generate\\n     * @return value  The generated number\\n     */\\n    function _fdr(_Rng memory rng, uint256 max) internal pure returns (uint256 value) {\\n        unchecked {\\n            uint256 limit = 1;\\n            while (true) {\\n                (limit, value) = (limit << 1, (value << 1) + _getBit(rng));\\n                if (max <= limit) {\\n                    if (value < max) {\\n                        break;\\n                    } else {\\n                        (limit, value) = (limit - max, value - max);\\n                    }\\n                }\\n            }\\n        }\\n    }\\n\\n    /**\\n     * Retrieve a bit out of the given RNG\\n     *\\n     * @param rng  The RNG to use\\n     * @return bit  The extracted bit as a number\\n     */\\n    function _getBit(_Rng memory rng) internal pure returns (uint256 bit) {\\n        unchecked {\\n            if (0 == rng.index) {\\n                rng.state = keccak256(abi.encodePacked(rng.state, rng.round++));\\n            }\\n            bit = (0 != (uint8(rng.state[rng.index >> 3]) & (uint8(1) << (rng.index % 8)))) ? 1 : 0;\\n            rng.index++;\\n        }\\n    }\\n\\n    /**\\n     * MergeSort implementation\\n     *\\n     * This method implements the MergeSort algorithm in a \\\"Top-Down\\\" straightforwards manner.\\n     * It makes sure to re-utilize the input as the output ao as to (somewhat) minimize copying.\\n     *\\n     *\\n     * @custom:ref \\\"Merge Sort\\\" https://en.wikipedia.org/wiki/Merge_sort\\n     * @param input  Input array to sort\\n     * @param output  Sorted array (actually a reference to the input array)\\n     */\\n    function _mergeSort(uint256[] memory input) internal pure returns (uint256[] memory output) {\\n        unchecked {\\n            uint256 length = input.length;\\n            if (2 <= length) {\\n                // set lengths and initialize, right length will always be AT LEAST equal to leftLength\\n                uint256 leftLength = length >> 1;\\n                uint256[] memory left = new uint256[](leftLength);\\n                uint256 rightLength = length - leftLength;\\n                uint256[] memory right = new uint256[](rightLength);\\n                // unordered split\\n                {\\n                    uint256 i;\\n                    uint256 j;\\n                    uint256 k;\\n                    // copy first half\\n                    while (j < leftLength) left[j++] = input[i++];\\n                    // copy second half\\n                    while (k < rightLength) right[k++] = input[i++];\\n                }\\n                // recursively call\\n                (left, right) = (_mergeSort(left), _mergeSort(right));\\n                // ordered merge\\n                {\\n                    uint256 i;\\n                    uint256 j;\\n                    uint256 k;\\n                    // merge by comparing heads\\n                    while (j < leftLength && k < rightLength) input[i++] = (left[j] <= right[k]) ? left[j++] : right[k++];\\n                    // deal with left slack\\n                    while (j < leftLength) input[i++] = left[j++];\\n                    // deal with right slack\\n                    while (k < rightLength) input[i++] = right[k++];\\n                }\\n            }\\n            output = input;\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x9ae0828d96424a4674baa4bad0ef46c2f395826458126c51d570ac12c0e7ce37\",\"license\":\"AGPL-3.0-or-later\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50611184806100206000396000f3fe608060405234801561001057600080fd5b50600436106100675760003560e01c806328e0a79d1161005057806328e0a79d146100a7578063672b2e3c146100c7578063693ec85e146100da57600080fd5b806321b25d771461006c578063261a323e14610094575b600080fd5b61007f61007a366004610d72565b6100fa565b60405190151581526020015b60405180910390f35b61007f6100a2366004610dd6565b61010d565b6100ba6100b5366004610dd6565b61013d565b60405161008b9190610e59565b6100ba6100d5366004610ed9565b610156565b6100ed6100e8366004610dd6565b610164565b60405161008b9190610f0e565b60006101068383610189565b9392505050565b600080600061012184805160209091012090565b8152602081019190915260400160002060020154151592915050565b606061015061014b83610230565b6103b5565b92915050565b606061015061014b836104ca565b6040805160608082018352600080835260208301529181019190915261015082610230565b81516020808401919091206000818152918290526040822060020154156101e757836040517f5226f2070000000000000000000000000000000000000000000000000000000081526004016101de9190610f9e565b60405180910390fd5b6101f0836104ca565b60008281526020818152604091829020835181558382015160018201559183015180516102239260028501920190610af3565b5060019695505050505050565b6040805160608082018352600080835260208301529181019190915281516020830120600090600081815260208190526040812060020154919250036102a457826040517f45d67df80000000000000000000000000000000000000000000000000000000081526004016101de9190610f9e565b600080828152602001908152602001600020604051806060016040529081600082015481526020016001820154815260200160028201805480602002602001604051908101604052809291908181526020016000905b828210156103a657838290600052602060002001805461031990610fb1565b80601f016020809104026020016040519081016040528092919081815260200182805461034590610fb1565b80156103925780601f1061036757610100808354040283529160200191610392565b820191906000526020600020905b81548152906001019060200180831161037557829003601f168201915b5050505050815260200190600101906102fa565b50505091525090949350505050565b606060006103f86103f3604051806060016040528086600001518152602001600060ff168152602001600081525085604001515186602001516105c0565b61071d565b9050826020015167ffffffffffffffff81111561041757610417610bb0565b60405190808252806020026020018201604052801561044a57816020015b60608152602001906001900390816104355790505b50915060005b83602001518110156104c357836040015182828151811061047357610473610feb565b60200260200101518151811061048b5761048b610feb565b60200260200101518382815181106104a5576104a5610feb565b602002602001018190525080806104bb90611001565b915050610450565b5050919050565b60408051606080820183526000808352602083015291810191909152816040015151600003610525576040517fa7eb64ad00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b8160200151600003610563576040517f0154273d00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b816020015182604001515110156105bc5781604001515182602001516040517f225722f20000000000000000000000000000000000000000000000000000000081526004016101de929190918252602082015260400190565b5090565b606060008367ffffffffffffffff8111156105dd576105dd610bb0565b604051908082528060200260200182016040528015610606578160200160208202803683370190505b50905060005b8481101561063a578082828151811061062757610627610feb565b602090810291909101015260010161060c565b508267ffffffffffffffff81111561065457610654610bb0565b60405190808252806020026020018201604052801561067d578160200160208202803683370190505b50915060005b83811015610714576000610699878388036109ed565b820190508281815181106106af576106af610feb565b60200260200101518383815181106106c9576106c9610feb565b60200260200101518584815181106106e3576106e3610feb565b602002602001018584815181106106fc576106fc610feb565b60209081029190910101919091525250600101610683565b50509392505050565b8051606090600281106109e657600181901c60008167ffffffffffffffff81111561074a5761074a610bb0565b604051908082528060200260200182016040528015610773578160200160208202803683370190505b50905081830360008167ffffffffffffffff81111561079457610794610bb0565b6040519080825280602002602001820160405280156107bd578160200160208202803683370190505b50905060008060005b8682101561081657895160018401938b9181106107e5576107e5610feb565b602002602001015186838060010194508151811061080557610805610feb565b6020026020010181815250506107c6565b8481101561086657895160018401938b91811061083557610835610feb565b602002602001015184828060010193508151811061085557610855610feb565b602002602001018181525050610816565b5050506108728361071d565b61087b8261071d565b9093509050600080805b868210801561089357508481105b1561093e578381815181106108aa576108aa610feb565b60200260200101518683815181106108c4576108c4610feb565b602002602001015111156108f65783516001820191859181106108e9576108e9610feb565b6020026020010151610916565b855160018301928791811061090d5761090d610feb565b60200260200101515b8a5160018501948c91811061092d5761092d610feb565b602002602001018181525050610885565b8682101561098e57855160018301928791811061095d5761095d610feb565b60200260200101518a848060010195508151811061097d5761097d610feb565b60200260200101818152505061093e565b848110156109de5783516001820191859181106109ad576109ad610feb565b60200260200101518a84806001019550815181106109cd576109cd610feb565b60200260200101818152505061098e565b505050505050505b5090919050565b600060015b600181901b610a0085610a2f565b60019390931b909201919050808311610a2357828210610a285790829003908290035b6109f2565b5092915050565b6000816020015160ff16600003610a7c5781516040808401805160018101909152815160208101939093529082015260600160408051601f19818403018152919052805160209091012082525b6008826020015160ff1681610a9357610a93611029565b0660ff16600160ff16901b82600001516003846020015160ff16901c60ff1660208110610ac257610ac2610feb565b1a1660ff16600003610ad5576000610ad8565b60015b6020909201805160010160ff90811690915291909116919050565b828054828255906000526020600020908101928215610b39579160200282015b82811115610b395782518290610b29908261108e565b5091602001919060010190610b13565b506105bc9291505b808211156105bc576000610b558282610b5e565b50600101610b41565b508054610b6a90610fb1565b6000825580601f10610b7a575050565b601f016020900490600052602060002090810190610b989190610b9b565b50565b5b808211156105bc5760008155600101610b9c565b634e487b7160e01b600052604160045260246000fd5b6040516060810167ffffffffffffffff81118282101715610be957610be9610bb0565b60405290565b604051601f8201601f1916810167ffffffffffffffff81118282101715610c1857610c18610bb0565b604052919050565b600082601f830112610c3157600080fd5b813567ffffffffffffffff811115610c4b57610c4b610bb0565b610c5e6020601f19601f84011601610bef565b818152846020838601011115610c7357600080fd5b816020850160208301376000918101602001919091529392505050565b600060608284031215610ca257600080fd5b610caa610bc6565b90508135815260208083013581830152604083013567ffffffffffffffff80821115610cd557600080fd5b818501915085601f830112610ce957600080fd5b813581811115610cfb57610cfb610bb0565b8060051b610d0a858201610bef565b9182528381018501918581019089841115610d2457600080fd5b86860192505b83831015610d6057823585811115610d425760008081fd5b610d508b89838a0101610c20565b8352509186019190860190610d2a565b60408801525094979650505050505050565b60008060408385031215610d8557600080fd5b823567ffffffffffffffff80821115610d9d57600080fd5b610da986838701610c20565b93506020850135915080821115610dbf57600080fd5b50610dcc85828601610c90565b9150509250929050565b600060208284031215610de857600080fd5b813567ffffffffffffffff811115610dff57600080fd5b610e0b84828501610c20565b949350505050565b6000815180845260005b81811015610e3957602081850181015186830182015201610e1d565b506000602082860101526020601f19601f83011685010191505092915050565b6000602080830181845280855180835260408601915060408160051b870101925083870160005b82811015610ecc577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc0888603018452610eba858351610e13565b94509285019290850190600101610e80565b5092979650505050505050565b600060208284031215610eeb57600080fd5b813567ffffffffffffffff811115610f0257600080fd5b610e0b84828501610c90565b6000602080835260808301845182850152818501516040850152604085015160608086015281815180845260a08701915060a08160051b8801019350848301925060005b81811015610ecc577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff60888603018352610f8c858551610e13565b94509285019291850191600101610f52565b6020815260006101066020830184610e13565b600181811c90821680610fc557607f821691505b602082108103610fe557634e487b7160e01b600052602260045260246000fd5b50919050565b634e487b7160e01b600052603260045260246000fd5b6000600019820361102257634e487b7160e01b600052601160045260246000fd5b5060010190565b634e487b7160e01b600052601260045260246000fd5b601f82111561108957600081815260208120601f850160051c810160208610156110665750805b601f850160051c820191505b8181101561108557828155600101611072565b5050505b505050565b815167ffffffffffffffff8111156110a8576110a8610bb0565b6110bc816110b68454610fb1565b8461103f565b602080601f8311600181146110f157600084156110d95750858301515b600019600386901b1c1916600185901b178555611085565b600085815260208120601f198616915b8281101561112057888601518255948401946001909101908401611101565b508582101561113e5787850151600019600388901b60f8161c191681555b5050505050600190811b0190555056fea26469706673582212203481796d756da1af4609876d1b9507e20a9470685e405ceac783513de5e678fc64736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100675760003560e01c806328e0a79d1161005057806328e0a79d146100a7578063672b2e3c146100c7578063693ec85e146100da57600080fd5b806321b25d771461006c578063261a323e14610094575b600080fd5b61007f61007a366004610d72565b6100fa565b60405190151581526020015b60405180910390f35b61007f6100a2366004610dd6565b61010d565b6100ba6100b5366004610dd6565b61013d565b60405161008b9190610e59565b6100ba6100d5366004610ed9565b610156565b6100ed6100e8366004610dd6565b610164565b60405161008b9190610f0e565b60006101068383610189565b9392505050565b600080600061012184805160209091012090565b8152602081019190915260400160002060020154151592915050565b606061015061014b83610230565b6103b5565b92915050565b606061015061014b836104ca565b6040805160608082018352600080835260208301529181019190915261015082610230565b81516020808401919091206000818152918290526040822060020154156101e757836040517f5226f2070000000000000000000000000000000000000000000000000000000081526004016101de9190610f9e565b60405180910390fd5b6101f0836104ca565b60008281526020818152604091829020835181558382015160018201559183015180516102239260028501920190610af3565b5060019695505050505050565b6040805160608082018352600080835260208301529181019190915281516020830120600090600081815260208190526040812060020154919250036102a457826040517f45d67df80000000000000000000000000000000000000000000000000000000081526004016101de9190610f9e565b600080828152602001908152602001600020604051806060016040529081600082015481526020016001820154815260200160028201805480602002602001604051908101604052809291908181526020016000905b828210156103a657838290600052602060002001805461031990610fb1565b80601f016020809104026020016040519081016040528092919081815260200182805461034590610fb1565b80156103925780601f1061036757610100808354040283529160200191610392565b820191906000526020600020905b81548152906001019060200180831161037557829003601f168201915b5050505050815260200190600101906102fa565b50505091525090949350505050565b606060006103f86103f3604051806060016040528086600001518152602001600060ff168152602001600081525085604001515186602001516105c0565b61071d565b9050826020015167ffffffffffffffff81111561041757610417610bb0565b60405190808252806020026020018201604052801561044a57816020015b60608152602001906001900390816104355790505b50915060005b83602001518110156104c357836040015182828151811061047357610473610feb565b60200260200101518151811061048b5761048b610feb565b60200260200101518382815181106104a5576104a5610feb565b602002602001018190525080806104bb90611001565b915050610450565b5050919050565b60408051606080820183526000808352602083015291810191909152816040015151600003610525576040517fa7eb64ad00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b8160200151600003610563576040517f0154273d00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b816020015182604001515110156105bc5781604001515182602001516040517f225722f20000000000000000000000000000000000000000000000000000000081526004016101de929190918252602082015260400190565b5090565b606060008367ffffffffffffffff8111156105dd576105dd610bb0565b604051908082528060200260200182016040528015610606578160200160208202803683370190505b50905060005b8481101561063a578082828151811061062757610627610feb565b602090810291909101015260010161060c565b508267ffffffffffffffff81111561065457610654610bb0565b60405190808252806020026020018201604052801561067d578160200160208202803683370190505b50915060005b83811015610714576000610699878388036109ed565b820190508281815181106106af576106af610feb565b60200260200101518383815181106106c9576106c9610feb565b60200260200101518584815181106106e3576106e3610feb565b602002602001018584815181106106fc576106fc610feb565b60209081029190910101919091525250600101610683565b50509392505050565b8051606090600281106109e657600181901c60008167ffffffffffffffff81111561074a5761074a610bb0565b604051908082528060200260200182016040528015610773578160200160208202803683370190505b50905081830360008167ffffffffffffffff81111561079457610794610bb0565b6040519080825280602002602001820160405280156107bd578160200160208202803683370190505b50905060008060005b8682101561081657895160018401938b9181106107e5576107e5610feb565b602002602001015186838060010194508151811061080557610805610feb565b6020026020010181815250506107c6565b8481101561086657895160018401938b91811061083557610835610feb565b602002602001015184828060010193508151811061085557610855610feb565b602002602001018181525050610816565b5050506108728361071d565b61087b8261071d565b9093509050600080805b868210801561089357508481105b1561093e578381815181106108aa576108aa610feb565b60200260200101518683815181106108c4576108c4610feb565b602002602001015111156108f65783516001820191859181106108e9576108e9610feb565b6020026020010151610916565b855160018301928791811061090d5761090d610feb565b60200260200101515b8a5160018501948c91811061092d5761092d610feb565b602002602001018181525050610885565b8682101561098e57855160018301928791811061095d5761095d610feb565b60200260200101518a848060010195508151811061097d5761097d610feb565b60200260200101818152505061093e565b848110156109de5783516001820191859181106109ad576109ad610feb565b60200260200101518a84806001019550815181106109cd576109cd610feb565b60200260200101818152505061098e565b505050505050505b5090919050565b600060015b600181901b610a0085610a2f565b60019390931b909201919050808311610a2357828210610a285790829003908290035b6109f2565b5092915050565b6000816020015160ff16600003610a7c5781516040808401805160018101909152815160208101939093529082015260600160408051601f19818403018152919052805160209091012082525b6008826020015160ff1681610a9357610a93611029565b0660ff16600160ff16901b82600001516003846020015160ff16901c60ff1660208110610ac257610ac2610feb565b1a1660ff16600003610ad5576000610ad8565b60015b6020909201805160010160ff90811690915291909116919050565b828054828255906000526020600020908101928215610b39579160200282015b82811115610b395782518290610b29908261108e565b5091602001919060010190610b13565b506105bc9291505b808211156105bc576000610b558282610b5e565b50600101610b41565b508054610b6a90610fb1565b6000825580601f10610b7a575050565b601f016020900490600052602060002090810190610b989190610b9b565b50565b5b808211156105bc5760008155600101610b9c565b634e487b7160e01b600052604160045260246000fd5b6040516060810167ffffffffffffffff81118282101715610be957610be9610bb0565b60405290565b604051601f8201601f1916810167ffffffffffffffff81118282101715610c1857610c18610bb0565b604052919050565b600082601f830112610c3157600080fd5b813567ffffffffffffffff811115610c4b57610c4b610bb0565b610c5e6020601f19601f84011601610bef565b818152846020838601011115610c7357600080fd5b816020850160208301376000918101602001919091529392505050565b600060608284031215610ca257600080fd5b610caa610bc6565b90508135815260208083013581830152604083013567ffffffffffffffff80821115610cd557600080fd5b818501915085601f830112610ce957600080fd5b813581811115610cfb57610cfb610bb0565b8060051b610d0a858201610bef565b9182528381018501918581019089841115610d2457600080fd5b86860192505b83831015610d6057823585811115610d425760008081fd5b610d508b89838a0101610c20565b8352509186019190860190610d2a565b60408801525094979650505050505050565b60008060408385031215610d8557600080fd5b823567ffffffffffffffff80821115610d9d57600080fd5b610da986838701610c20565b93506020850135915080821115610dbf57600080fd5b50610dcc85828601610c90565b9150509250929050565b600060208284031215610de857600080fd5b813567ffffffffffffffff811115610dff57600080fd5b610e0b84828501610c20565b949350505050565b6000815180845260005b81811015610e3957602081850181015186830182015201610e1d565b506000602082860101526020601f19601f83011685010191505092915050565b6000602080830181845280855180835260408601915060408160051b870101925083870160005b82811015610ecc577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc0888603018452610eba858351610e13565b94509285019290850190600101610e80565b5092979650505050505050565b600060208284031215610eeb57600080fd5b813567ffffffffffffffff811115610f0257600080fd5b610e0b84828501610c90565b6000602080835260808301845182850152818501516040850152604085015160608086015281815180845260a08701915060a08160051b8801019350848301925060005b81811015610ecc577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff60888603018352610f8c858551610e13565b94509285019291850191600101610f52565b6020815260006101066020830184610e13565b600181811c90821680610fc557607f821691505b602082108103610fe557634e487b7160e01b600052602260045260246000fd5b50919050565b634e487b7160e01b600052603260045260246000fd5b6000600019820361102257634e487b7160e01b600052601160045260246000fd5b5060010190565b634e487b7160e01b600052601260045260246000fd5b601f82111561108957600081815260208120601f850160051c810160208610156110665750805b601f850160051c820191505b8181101561108557828155600101611072565b5050505b505050565b815167ffffffffffffffff8111156110a8576110a8610bb0565b6110bc816110b68454610fb1565b8461103f565b602080601f8311600181146110f157600084156110d95750858301515b600019600386901b1c1916600185901b178555611085565b600085815260208120601f198616915b8281101561112057888601518255948401946001909101908401611101565b508582101561113e5787850151600019600388901b60f8161c191681555b5050505050600190811b0190555056fea26469706673582212203481796d756da1af4609876d1b9507e20a9470685e405ceac783513de5e678fc64736f6c63430008110033",
+  "devdoc": {
+    "errors": {
+      "NameAlreadyInUse(string)": [
+        {
+          "params": {
+            "name": "The offending name"
+          }
+        }
+      ],
+      "NotYetCreated(string)": [
+        {
+          "params": {
+            "name": "The offending name"
+          }
+        }
+      ],
+      "NumberOfWinnersMustBeAtMostNumberOfPlayers(uint256,uint256)": [
+        {
+          "params": {
+            "numberOfPlayers": "The offending number of players",
+            "numberOfWinners": "The offending number of winners"
+          }
+        }
+      ]
+    },
+    "kind": "dev",
+    "methods": {
+      "create(string,(bytes32,uint256,string[]))": {
+        "custom:revert": "NameAlreadyInUsePlayersMustBeNonEmptyNumberOfWinnersMustBePositiveNumberOfWinnersMustBeAtMostNumberOfPlayers",
+        "params": {
+          "config": "Lottery configuration to use",
+          "name": "Lottery name to use"
+        },
+        "returns": {
+          "success": " True if creation was successful"
+        }
+      },
+      "exists(string)": {
+        "params": {
+          "name": "Lottery name to check"
+        },
+        "returns": {
+          "existing": " True if the given lottery name exists, false otherwise"
+        }
+      },
+      "get(string)": {
+        "custom:revert": "NotYetCreated",
+        "params": {
+          "name": "Lottery name to retrieve"
+        },
+        "returns": {
+          "lottery": " The lottery configuration proper"
+        }
+      },
+      "simulate((bytes32,uint256,string[]))": {
+        "custom:revert": "PlayersMustBeNonEmptyNumberOfWinnersMustBePositiveNumberOfWinnersMustBeAtMostNumberOfPlayers",
+        "params": {
+          "config": "Lottery configuration to use"
+        },
+        "returns": {
+          "prizeWinners": " List of winners"
+        }
+      },
+      "winners(string)": {
+        "custom:revert": "NotYetCreated",
+        "params": {
+          "name": "Lottery name to retrieve winners for"
+        },
+        "returns": {
+          "prizeWinners": " List of winners"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "errors": {
+      "NameAlreadyInUse(string)": [
+        {
+          "notice": "Raised upon encountering an already-existing lottery name"
+        }
+      ],
+      "NotYetCreated(string)": [
+        {
+          "notice": "Raised upon encountering a non-existing lottery name"
+        }
+      ],
+      "NumberOfWinnersMustBeAtMostNumberOfPlayers(uint256,uint256)": [
+        {
+          "notice": "Raised upon encountering a number of winners greater than the corresponding population"
+        }
+      ],
+      "NumberOfWinnersMustBePositive()": [
+        {
+          "notice": "Raised upon encountering a 0-size selection (ie. the number of winners)"
+        }
+      ],
+      "PlayersMustBeNonEmpty()": [
+        {
+          "notice": "Raised upon encountering an empty players list"
+        }
+      ]
+    },
+    "kind": "user",
+    "methods": {
+      "create(string,(bytes32,uint256,string[]))": {
+        "notice": "Create a new lottery with the given configuration"
+      },
+      "exists(string)": {
+        "notice": "Determine whether the given lottery name exists"
+      },
+      "get(string)": {
+        "notice": "Retrieve an existing lottery by name"
+      },
+      "simulate((bytes32,uint256,string[]))": {
+        "notice": "Simulate the execution of the given lottery configuration"
+      },
+      "winners(string)": {
+        "notice": "Retrieve the list of winners"
+      }
+    },
+    "notice": "Blockchain-based Lottery Implementation This Lottery implementation uses iterated Keccak256 as the underlying RNG.",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 94,
+        "contract": "contracts/Lottery.sol:Lottery",
+        "label": "_lotteries",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_bytes32,t_struct(Config)33_storage)"
+      }
+    ],
+    "types": {
+      "t_array(t_string_storage)dyn_storage": {
+        "base": "t_string_storage",
+        "encoding": "dynamic_array",
+        "label": "string[]",
+        "numberOfBytes": "32"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_bytes32,t_struct(Config)33_storage)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => struct ILottery.Config)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Config)33_storage"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(Config)33_storage": {
+        "encoding": "inplace",
+        "label": "struct ILottery.Config",
+        "members": [
+          {
+            "astId": 27,
+            "contract": "contracts/Lottery.sol:Lottery",
+            "label": "seed",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bytes32"
+          },
+          {
+            "astId": 29,
+            "contract": "contracts/Lottery.sol:Lottery",
+            "label": "numberOfWinners",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 32,
+            "contract": "contracts/Lottery.sol:Lottery",
+            "label": "players",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_array(t_string_storage)dyn_storage"
+          }
+        ],
+        "numberOfBytes": "96"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

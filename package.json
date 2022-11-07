@@ -1,14 +1,14 @@
 {
-  "name": "@lacrypta/gateway",
-  "version": "0.8.17",
+  "name": "@lacrypta/lottery",
+  "version": "0.0.0",
   "license": "AGPL-3.0-or-later",
   "homepage": "https://lacrypta.com.ar/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lacrypta/gateway.git"
+    "url": "git+https://github.com/lacrypta/lottery.git"
   },
   "bugs": {
-    "url": "https://github.com/lacrypta/gateway/issues"
+    "url": "https://github.com/lacrypta/lottery/issues"
   },
   "engines": {
     "node": ">=11"

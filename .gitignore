@@ -10,3 +10,18 @@
 !.gitkeep
 !.nvmrc
 !/**/.gitkeep
+
+# Ignore framework-generated files
+abi
+artifacts
+cache
+node_modules
+typechain-types
+
+# Yarn error log
+yarn-error.log
+
+# Non-matic deployments
+deployments/**
+!deployments/matic
+!deployments/matic/**

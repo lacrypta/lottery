@@ -234,10 +234,12 @@ contract Lottery is ILottery {
      * @return prizeWinners  List of winners
      */
     function _winners(Config memory config) internal pure returns (string[] memory prizeWinners) {
-        uint256[] memory winnerIds = _fisherYatesUpTo(_Rng(config.seed, 0, 0), config.players.length, config.numberOfWinners);
-        prizeWinners = new string[](config.numberOfWinners);
-        for (uint256 i = 0; i < config.numberOfWinners; i++) {
-            prizeWinners[i] = config.players[winnerIds[i]];
+        unchecked {
+            uint256[] memory winnerIds = _fisherYatesUpTo(_Rng(config.seed, 0, 0), config.players.length, config.numberOfWinners);
+            prizeWinners = new string[](config.numberOfWinners);
+            for (uint256 i = 0; i < config.numberOfWinners; i++) {
+                prizeWinners[i] = config.players[winnerIds[i]];
+            }
         }
     }
 

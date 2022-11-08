@@ -166,14 +166,13 @@ contract Lottery is ILottery {
      * In order to create the truncated permutation proper, the Fisher--Yates algorithm is run until `config.numberOfWinners` items have been
      * generated.
      * In order to feed the Fisher--yates algorithm, the FDR algorithm is used.
-     * Finally, the result is sorted using MergeSort.
      *
      *
      * @param config  Lottery configuration to use
      * @return prizeWinners  List of winners
      */
     function _winners(Config memory config) internal pure returns (string[] memory prizeWinners) {
-        uint256[] memory winnerIds = _mergeSort(_fisherYatesUpTo(_Rng(config.seed, 0, 0), config.players.length, config.numberOfWinners));
+        uint256[] memory winnerIds = _fisherYatesUpTo(_Rng(config.seed, 0, 0), config.players.length, config.numberOfWinners);
         prizeWinners = new string[](config.numberOfWinners);
         for (uint256 i = 0; i < config.numberOfWinners; i++) {
             prizeWinners[i] = config.players[winnerIds[i]];
@@ -242,55 +241,6 @@ contract Lottery is ILottery {
             }
             bit = (0 != (uint8(rng.state[rng.index >> 3]) & (uint8(1) << (rng.index % 8)))) ? 1 : 0;
             rng.index++;
-        }
-    }
-
-    /**
-     * MergeSort implementation
-     *
-     * This method implements the MergeSort algorithm in a "Top-Down" straightforwards manner.
-     * It makes sure to re-utilize the input as the output ao as to (somewhat) minimize copying.
-     *
-     *
-     * @custom:ref "Merge Sort" https://en.wikipedia.org/wiki/Merge_sort
-     * @param input  Input array to sort
-     * @param output  Sorted array (actually a reference to the input array)
-     */
-    function _mergeSort(uint256[] memory input) internal pure returns (uint256[] memory output) {
-        unchecked {
-            uint256 length = input.length;
-            if (2 <= length) {
-                // set lengths and initialize, right length will always be AT LEAST equal to leftLength
-                uint256 leftLength = length >> 1;
-                uint256[] memory left = new uint256[](leftLength);
-                uint256 rightLength = length - leftLength;
-                uint256[] memory right = new uint256[](rightLength);
-                // unordered split
-                {
-                    uint256 i;
-                    uint256 j;
-                    uint256 k;
-                    // copy first half
-                    while (j < leftLength) left[j++] = input[i++];
-                    // copy second half
-                    while (k < rightLength) right[k++] = input[i++];
-                }
-                // recursively call
-                (left, right) = (_mergeSort(left), _mergeSort(right));
-                // ordered merge
-                {
-                    uint256 i;
-                    uint256 j;
-                    uint256 k;
-                    // merge by comparing heads
-                    while (j < leftLength && k < rightLength) input[i++] = (left[j] <= right[k]) ? left[j++] : right[k++];
-                    // deal with left slack
-                    while (j < leftLength) input[i++] = left[j++];
-                    // deal with right slack
-                    while (k < rightLength) input[i++] = right[k++];
-                }
-            }
-            output = input;
         }
     }
 }

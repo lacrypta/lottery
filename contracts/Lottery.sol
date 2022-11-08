@@ -50,7 +50,7 @@ contract Lottery is ILottery {
      * @custom:revert  NumberOfWinnersMustBeAtMostNumberOfPlayers
      */
     function create(string memory name, Config memory config) external override returns (bool success) {
-        success = _create(name, config);
+        success = _create(name, _validate(config));
     }
 
     /**
@@ -153,7 +153,7 @@ contract Lottery is ILottery {
         if (0 != _lotteries[nameHash].players.length) {
             revert NameAlreadyInUse(name);
         }
-        _lotteries[nameHash] = _validate(config);
+        _lotteries[nameHash] = config;
         return true;
     }
 
@@ -167,8 +167,6 @@ contract Lottery is ILottery {
      * generated.
      * In order to feed the Fisher--yates algorithm, the FDR algorithm is used.
      * Finally, the result is sorted using MergeSort.
-     *
-     * WARNING: this method assumes the given configuration is indeed valid (as per _validateConfig(config)).
      *
      *
      * @param config  Lottery configuration to use

@@ -234,47 +234,23 @@ The way we're going to go about it is conceptually simple:
 2. keep only the first `n` players in the list, call these the winners.
 
 By way of example, let's say we have 5 players: Alice, Bob, Chary, David, and Eve, and we'd like to select 3 of them as winners.
-Here's what's happening graphically:
+Here's what's happening:
 
-    +-----+-----+-----+-----+-----+
-    |  A  |  B  |  C  |  D  |  E  |
-    +-----+-----+-----+-----+-----+
-       ^                       ^
-       |                       |
-       \----------\ /----------/       i = 0
-                   X                   j <-- [0, 5) = 4
-       /----------/ \----------\       i + j = 0 + 4 = 4
-       |                       |
-       v                       v
-    +-----+-----+-----+-----+-----+
-    |  E  |  B  |  C  |  D  |  A  |
-    +-----+-----+-----+-----+-----+
-             ^     ^
-             |     |
-             \-\ /-/                   i = 1
-                X                      j <-- [0, 4) = 1
-             /-/ \-\                   i + j = 1 + 1 = 2
-             |     |
-             v     v
-    +-----+-----+-----+-----+-----+
-    |  E  |  C  |  B  |  D  |  A  |
-    +-----+-----+-----+-----+-----+
-                  ^ ^
-                  | |
-                  \ /                  i = 2
-                   X                   j <-- [0, 3) = 0
-                  / \                  i + j = 2 + 0 = 2
-                  | |
-                  v v
-    +-----+-----+-----+-----+-----+
-    |  E  |  C  |  B  |  D  |  A  |
-    +-----+-----+-----+-----+-----+
-       |     |     |
-       |     |     |
-       v     v     v
-    +-----+-----+-----+
-    |  E  |  C  |  B  |
-    +-----+-----+-----+
+- at the very first iteration, `i` equals 0, `j` will take a uniformly random number in the `[0, 5)` interval, say 4, then `i + j` will equal `0 + 4 = 4`, thus, we swap the 0-th and 4-th positions in the `players` list:
+
+![Swap 0 and 4](assets/swap1.png "Swap 0 and 4")
+
+- at the very first iteration, `i` equals 1, `j` will take a uniformly random number in the `[0, 4)` interval, say 1, then `i + j` will equal `1 + 1 = 2`, thus, we swap the 1-th and 2-th positions in the `players` list:
+
+![Swap 1 and 2](assets/swap2.png "Swap 1 and 2")
+
+- at the very third and last iteration, `i` equals 2, `j` will take a uniformly random number in the `[0, 3)` interval, say 0, then `i + j` will equal `2 + 0 = 2`, thus, we swap the 2-th and 2-th positions in the `players` list (ie. we do nothing):
+
+![Swap 2 and 2](assets/swap3.png "Swap 2 and 2")
+
+- finally, only the first 3 positions matter, so we simply drop the rest:
+
+![Drop excess](assets/swap4.png "Drop excess")
 
 This is noting more than the [Fisher--Yates Shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle) being executed until the `n`-th step and bailing out afterwards.
 

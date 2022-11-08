@@ -259,7 +259,7 @@ Here's what's happening graphically:
              |     |
              v     v
     +-----+-----+-----+-----+-----+
-    |  E  |  B  |  C  |  D  |  A  |
+    |  E  |  C  |  B  |  D  |  A  |
     +-----+-----+-----+-----+-----+
                   ^ ^
                   | |
@@ -269,13 +269,13 @@ Here's what's happening graphically:
                   | |
                   v v
     +-----+-----+-----+-----+-----+
-    |  E  |  B  |  C  |  D  |  A  |
+    |  E  |  C  |  B  |  D  |  A  |
     +-----+-----+-----+-----+-----+
        |     |     |
        |     |     |
        v     v     v
     +-----+-----+-----+
-    |  E  |  B  |  C  |
+    |  E  |  C  |  B  |
     +-----+-----+-----+
 
 This is noting more than the [Fisher--Yates Shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle) being executed until the `n`-th step and bailing out afterwards.

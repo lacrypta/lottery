@@ -98,6 +98,19 @@ interface ILottery {
     }
 
     /**
+     * Build a lottery configuration from the given parameters
+     *
+     * @param seed  The RNG seed to use
+     * @param numberOfWinners  The number of winners to use
+     * @param players  A list of players to use
+     * @return config  The constructed configuration
+     * @custom:revert  PlayersMustBeNonEmpty
+     * @custom:revert  NumberOfWinnersMustBePositive
+     * @custom:revert  NumberOfWinnersMustBeAtMostNumberOfPlayers
+     */
+    function build(bytes32 seed, uint256 numberOfWinners, string[] memory players) external pure returns (Config memory config);
+
+    /**
      * Determine whether the given lottery name exists
      *
      * @param name  Lottery name to check
@@ -128,6 +141,21 @@ interface ILottery {
     function create(string memory name, Config memory config) external returns (bool success);
 
     /**
+     * Create a new lottery with the given configuration parts
+     *
+     * @param name  Lottery name to use
+     * @param seed  The RNG seed to use
+     * @param numberOfWinners  The number of winners to use
+     * @param players  A list of players to use
+     * @return success  True if creation was successful
+     * @custom:revert  NameAlreadyInUse
+     * @custom:revert  PlayersMustBeNonEmpty
+     * @custom:revert  NumberOfWinnersMustBePositive
+     * @custom:revert  NumberOfWinnersMustBeAtMostNumberOfPlayers
+     */
+    function create(string memory name, bytes32 seed, uint256 numberOfWinners, string[] memory players) external returns (bool success);
+
+    /**
      * Retrieve the list of winners
      *
      * @param name  Lottery name to retrieve winners for
@@ -146,4 +174,17 @@ interface ILottery {
      * @custom:revert  NumberOfWinnersMustBeAtMostNumberOfPlayers
      */
     function simulate(Config memory config) external pure returns (string[] memory prizeWinners);
+
+    /**
+     * Simulate the execution of the given lottery configuration parts
+     *
+     * @param seed  The RNG seed to use
+     * @param numberOfWinners  The number of winners to use
+     * @param players  A list of players to use
+     * @return prizeWinners  List of winners
+     * @custom:revert  PlayersMustBeNonEmpty
+     * @custom:revert  NumberOfWinnersMustBePositive
+     * @custom:revert  NumberOfWinnersMustBeAtMostNumberOfPlayers
+     */
+    function simulate(bytes32 seed, uint256 numberOfWinners, string[] memory players) external pure returns (string[] memory prizeWinners);
 }

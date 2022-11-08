@@ -18,6 +18,21 @@ contract Lottery is ILottery {
     mapping(bytes32 => Config) internal _lotteries;
 
     /**
+     * Build a lottery configuration from the given parameters
+     *
+     * @param seed  The RNG seed to use
+     * @param numberOfWinners  The number of winners to use
+     * @param players  A list of players to use
+     * @return config  The constructed configuration
+     * @custom:revert  PlayersMustBeNonEmpty
+     * @custom:revert  NumberOfWinnersMustBePositive
+     * @custom:revert  NumberOfWinnersMustBeAtMostNumberOfPlayers
+     */
+    function build(bytes32 seed, uint256 numberOfWinners, string[] memory players) external pure override returns (Config memory config) {
+        config = _build(seed, numberOfWinners, players);
+    }
+
+    /**
      * Determine whether the given lottery name exists
      *
      * @param name  Lottery name to check
@@ -54,6 +69,23 @@ contract Lottery is ILottery {
     }
 
     /**
+     * Create a new lottery with the given configuration parts
+     *
+     * @param name  Lottery name to use
+     * @param seed  The RNG seed to use
+     * @param numberOfWinners  The number of winners to use
+     * @param players  A list of players to use
+     * @return success  True if creation was successful
+     * @custom:revert  NameAlreadyInUse
+     * @custom:revert  PlayersMustBeNonEmpty
+     * @custom:revert  NumberOfWinnersMustBePositive
+     * @custom:revert  NumberOfWinnersMustBeAtMostNumberOfPlayers
+     */
+    function create(string memory name, bytes32 seed, uint256 numberOfWinners, string[] memory players) external override returns (bool success) {
+        success = _create(name, _build(seed, numberOfWinners, players));
+    }
+
+    /**
      * Retrieve the list of winners
      *
      * @param name  Lottery name to retrieve winners for
@@ -78,6 +110,21 @@ contract Lottery is ILottery {
     }
 
     /**
+     * Simulate the execution of the given lottery configuration parts
+     *
+     * @param seed  The RNG seed to use
+     * @param numberOfWinners  The number of winners to use
+     * @param players  A list of players to use
+     * @return prizeWinners  List of winners
+     * @custom:revert  PlayersMustBeNonEmpty
+     * @custom:revert  NumberOfWinnersMustBePositive
+     * @custom:revert  NumberOfWinnersMustBeAtMostNumberOfPlayers
+     */
+    function simulate(bytes32 seed, uint256 numberOfWinners, string[] memory players) external pure override returns (string[] memory prizeWinners) {
+        prizeWinners = _winners(_build(seed, numberOfWinners, players));
+    }
+
+    /**
      * Structure representing the internal state of the underlying RNG
      *
      * @custom:member state  The internal state (to be returned iteratively)
@@ -88,6 +135,21 @@ contract Lottery is ILottery {
         bytes32 state;
         uint8 index;
         uint256 round;
+    }
+
+    /**
+     * Build a lottery configuration from the given parameters (internal)
+     *
+     * @param seed  The RNG seed to use
+     * @param numberOfWinners  The number of winners to use
+     * @param players  A list of players to use
+     * @return config  The constructed configuration
+     * @custom:revert  PlayersMustBeNonEmpty
+     * @custom:revert  NumberOfWinnersMustBePositive
+     * @custom:revert  NumberOfWinnersMustBeAtMostNumberOfPlayers
+     */
+    function _build(bytes32 seed, uint256 numberOfWinners, string[] memory players) internal pure returns (Config memory config) {
+        config = _validate(Config(seed, numberOfWinners, players));
     }
 
     /**

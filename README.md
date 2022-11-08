@@ -45,11 +45,11 @@ The list of children interested in these is[^cast]: Alice, Bob, Carol, Chad, Cha
 
 Finally, let's use `"0x0000000000000000000000000000000000000000000000000000000000000000"` as the random seed.
 
-With the preliminaries out of the way, head on over to [PolygonScan > Contract](https://polygonscan.com/address/0x0123456789aBcDeF0123456789AbCdEf01234567).
+With the preliminaries out of the way, head on over to [PolygonScan > Contract](https://polygonscan.com/address/0x1842d9456dfD1f785F69Df789150481af941b2b9).
 
 #### Getting the Lottery out of the Way
 
-To get the Lottery out of the way, you can simply call the [`simulate(bytes32,uint256,string[])`](https://polygonscan.com/address/0x0123456789aBcDeF0123456789AbCdEf01234567#readContract#F5) method, providing the following parameters:
+To get the Lottery out of the way, you can simply call the [`simulate(bytes32,uint256,string[])`](https://polygonscan.com/address/0x1842d9456dfD1f785F69Df789150481af941b2b9#readContract#F5) method, providing the following parameters:
 
 `seed (bytes32)`
 : `"0x0000000000000000000000000000000000000000000000000000000000000000"`
@@ -69,7 +69,7 @@ signifying that Alice, Charlie, Erin, Grace, and Sybil are the winners.
 
 #### Creating a New Lottery
 
-Alternatively, we can create a new Lottery and have it be persisted on the Blockchain forever by calling the [`create(string,bytes32,uint256,string[])`](https://polygonscan.com/address/0x0123456789aBcDeF0123456789AbCdEf01234567#writeContract#F2) method with:
+Alternatively, we can create a new Lottery and have it be persisted on the Blockchain forever by calling the [`create(string,bytes32,uint256,string[])`](https://polygonscan.com/address/0x1842d9456dfD1f785F69Df789150481af941b2b9#writeContract#F2) method with:
 
 `name (string)`
 : `"Willy Wonka's Chocolate Factory Tour"`
@@ -92,7 +92,7 @@ Signifying that the Lottery was created successfully.
 
 #### Querying Lottery Winners
 
-Finally, we can check who won the the _"Willy Wonka's Chocolate Factory Tour"_ Lottery by calling [`winners(string)`](https://polygonscan.com/address/0x0123456789aBcDeF0123456789AbCdEf01234567#readContract#F6) with parameters:
+Finally, we can check who won the the _"Willy Wonka's Chocolate Factory Tour"_ Lottery by calling [`winners(string)`](https://polygonscan.com/address/0x1842d9456dfD1f785F69Df789150481af941b2b9#readContract#F6) with parameters:
 
 `name (string)`
 : `"Willy Wonka's Chocolate Factory Tour"`
@@ -112,7 +112,7 @@ A Lottery configuration (viz. `Config`) consists of 3 parts:
 - a **number of winners**: this is the number of prizes that will be raffled out, and
 - a **players** list: a list of strings, one for each player (but see [below](#tips--tricks) for alternatives).
 
-A configuration can be generated from its parts by calling the [`build(bytes32,uint256,string[])`](https://polygonscan.com/address/0x0123456789aBcDeF0123456789AbCdEf01234567#readContract#F1) method, but this is indeed quite unnecessary, since one can simply build one such configuration like so:
+A configuration can be generated from its parts by calling the [`build(bytes32,uint256,string[])`](https://polygonscan.com/address/0x1842d9456dfD1f785F69Df789150481af941b2b9#readContract#F1) method, but this is indeed quite unnecessary, since one can simply build one such configuration like so:
 
     [
         "0x0000000000000000000000000000000000000000000000000000000000000000",
@@ -134,10 +134,10 @@ Even more so, all the interfaces accepting a `Config` parameter accept the part-
 This is the easiest interface to use, and it consists solely of `pure` methods, thus incurring no transaction cost at all.
 The methods exposed are:
 
-[`simulate(tuple)`](https://polygonscan.com/address/0x0123456789aBcDeF0123456789AbCdEf01234567#readContract#F4)
+[`simulate(tuple)`](https://polygonscan.com/address/0x1842d9456dfD1f785F69Df789150481af941b2b9#readContract#F4)
 : Takes a `Config` and returns the Lottery winners.
 
-[`simulate(bytes32,uint256,string[])`](https://polygonscan.com/address/0x0123456789aBcDeF0123456789AbCdEf01234567#readContract#F5)
+[`simulate(bytes32,uint256,string[])`](https://polygonscan.com/address/0x1842d9456dfD1f785F69Df789150481af941b2b9#readContract#F5)
 : Takes a part-wise description of a Lottery's configuration and returns the Lottery winners.
 
 The downside to using these methods is that nothing gets persisted to the Blockchain, making auditing impossible.

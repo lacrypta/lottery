@@ -15,7 +15,7 @@ THE_CUT="$(get_command_or_fail cut)"
 THE_GIT="$(get_command_or_fail git)"
 THE_GREP="$(get_command_or_fail grep)"
 THE_HEAD="$(get_command_or_fail head)"
-THE_SED="$(get_command_or_fail SED)"
+THE_SED="$(get_command_or_fail sed)"
 
 builtin cd "$("${THE_GIT}" rev-parse --show-toplevel || builtin true)" || exit 1
 

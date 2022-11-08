@@ -25,7 +25,7 @@
     "compile": "hardhat compile",
     "deploy": "hardhat run ./scripts/deploy.ts",
     "postcompile": "./scripts/postcompile.sh",
-    "prepublish": "yarn clean && yarn compile"
+    "prepublish": "yarn clean && yarn compile && scripts/addressFixup.sh"
   },
   "devDependencies": {
     "@ethersproject/abi": "^5.7.0",

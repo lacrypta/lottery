@@ -38,9 +38,7 @@ In what follows, we'll delve deeper into the particulars of the Lottery's implem
 
 ### Quick Start
 
-Let's assume the address the Lottery is deployed to is `0x0123456789aBcDeF0123456789AbCdEf01234567` (all the links hereafter will point to this, so make sure to overwrite it with the _actual_ address you can find in `deployments/matic/Lottery.json:address`).
-
-Furthermore, let's say we want to raffle out **5** _Golden Tickets_ to a tour of _Willy Wonka's Chocolate Factory_.
+Let's say we want to raffle out **5** _Golden Tickets_ to a tour of _Willy Wonka's Chocolate Factory_.
 The list of children interested in these is[^cast]: Alice, Bob, Carol, Chad, Charlie, Craig, Dan, David, Erin, Eve, Faythe, Frank, Grace, Heidi, Ivan, Judy, Mallory, Michael, Olivia, Oscar, Peggy, Rupert, Sybil, Trent, Trudy, Vanna, Victor, Walter, Wendy, and Yves, 30 in total (note that this list is sorted, but it need not be so).
 
 [^cast]: Taken _ad lib_ from [Wikipedia > Alice and Bob](https://en.wikipedia.org/wiki/Alice_and_Bob#Cast_of_characters).

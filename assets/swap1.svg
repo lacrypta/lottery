@@ -2,30 +2,33 @@
 <svg width="500" height="350">
     <rect x="0" y="0" width="500" height="350" fill="rgb(255,255,255)" stroke-width="0" stroke="rgb(0,0,0)"/>
 
-    <rect x="0" y="0" width="100" height="100" fill="#F44336" stroke-width="4" stroke="rgb(0,0,0)"/>
-    <rect x="100" y="0" width="100" height="100" fill="rgb(255,255,255)" stroke-width="4" stroke="rgb(0,0,0)"/>
-    <rect x="200" y="0" width="100" height="100" fill="rgb(255,255,255)" stroke-width="4" stroke="rgb(0,0,0)"/>
-    <rect x="300" y="0" width="100" height="100" fill="rgb(255,255,255)" stroke-width="4" stroke="rgb(0,0,0)"/>
-    <rect x="400" y="0" width="100" height="100" fill="#F44336" stroke-width="4" stroke="rgb(0,0,0)"/>
-    <text x="50" y="70" font-family="sans-serif" font-weight="bold" font-size="50" text-anchor="middle">A</text>
-    <text x="150" y="70" font-family="sans-serif" font-weight="bold" font-size="50" text-anchor="middle">B</text>
-    <text x="250" y="70" font-family="sans-serif" font-weight="bold" font-size="50" text-anchor="middle">C</text>
-    <text x="350" y="70" font-family="sans-serif" font-weight="bold" font-size="50" text-anchor="middle">D</text>
-    <text x="450" y="70" font-family="sans-serif" font-weight="bold" font-size="50" text-anchor="middle">E</text>
-
+    <polyline points="50,100 50,150 450,200 450,230" fill="none" stroke-width="10" stroke="rgb(255,255,255)" />
     <polyline points="50,100 50,150 450,200 450,230" fill="none" stroke-width="5" stroke="rgb(0,0,0)" />
-    <polyline points="450,100 450,150 50,200 50,230" fill="none" stroke-width="5" stroke="rgb(0,0,0)" />
     <polyline points="40,230 60,230 50,250 40,230" fill="rgb(0,0,0)" stroke-width="0" />
+
+    <polyline points="450,100 450,150 50,200 50,230" fill="none" stroke-width="10" stroke="rgb(255,255,255)" />
+    <polyline points="450,100 450,150 50,200 50,230" fill="none" stroke-width="5" stroke="rgb(0,0,0)" />
     <polyline points="440,230 460,230 450,250 440,230" fill="rgb(0,0,0)" stroke-width="0" />
 
+    <rect x="0" y="0" width="100" height="100" fill="#F44336" stroke-width="4" stroke="rgb(0,0,0)"/>
+    <text x="50" y="70" font-family="sans-serif" font-weight="bold" font-size="50" text-anchor="middle">A</text>
+    <rect x="100" y="0" width="100" height="100" fill="rgb(255,255,255)" stroke-width="4" stroke="rgb(0,0,0)"/>
+    <text x="150" y="70" font-family="sans-serif" font-weight="bold" font-size="50" text-anchor="middle">B</text>
+    <rect x="200" y="0" width="100" height="100" fill="rgb(255,255,255)" stroke-width="4" stroke="rgb(0,0,0)"/>
+    <text x="250" y="70" font-family="sans-serif" font-weight="bold" font-size="50" text-anchor="middle">C</text>
+    <rect x="300" y="0" width="100" height="100" fill="rgb(255,255,255)" stroke-width="4" stroke="rgb(0,0,0)"/>
+    <text x="350" y="70" font-family="sans-serif" font-weight="bold" font-size="50" text-anchor="middle">D</text>
+    <rect x="400" y="0" width="100" height="100" fill="#F44336" stroke-width="4" stroke="rgb(0,0,0)"/>
+    <text x="450" y="70" font-family="sans-serif" font-weight="bold" font-size="50" text-anchor="middle">E</text>
+
     <rect x="0" y="250" width="100" height="100" fill="#4CAF50" stroke-width="4" stroke="rgb(0,0,0)"/>
-    <rect x="100" y="250" width="100" height="100" fill="rgb(255,255,255)" stroke-width="4" stroke="rgb(0,0,0)"/>
-    <rect x="200" y="250" width="100" height="100" fill="rgb(255,255,255)" stroke-width="4" stroke="rgb(0,0,0)"/>
-    <rect x="300" y="250" width="100" height="100" fill="rgb(255,255,255)" stroke-width="4" stroke="rgb(0,0,0)"/>
-    <rect x="400" y="250" width="100" height="100" fill="#4CAF50" stroke-width="4" stroke="rgb(0,0,0)"/>
     <text x="50" y="320" font-family="sans-serif" font-weight="bold" font-size="50" text-anchor="middle">E</text>
+    <rect x="100" y="250" width="100" height="100" fill="rgb(255,255,255)" stroke-width="4" stroke="rgb(0,0,0)"/>
     <text x="150" y="320" font-family="sans-serif" font-weight="bold" font-size="50" text-anchor="middle">B</text>
+    <rect x="200" y="250" width="100" height="100" fill="rgb(255,255,255)" stroke-width="4" stroke="rgb(0,0,0)"/>
     <text x="250" y="320" font-family="sans-serif" font-weight="bold" font-size="50" text-anchor="middle">C</text>
+    <rect x="300" y="250" width="100" height="100" fill="rgb(255,255,255)" stroke-width="4" stroke="rgb(0,0,0)"/>
     <text x="350" y="320" font-family="sans-serif" font-weight="bold" font-size="50" text-anchor="middle">D</text>
+    <rect x="400" y="250" width="100" height="100" fill="#4CAF50" stroke-width="4" stroke="rgb(0,0,0)"/>
     <text x="450" y="320" font-family="sans-serif" font-weight="bold" font-size="50" text-anchor="middle">A</text>
 </svg>
